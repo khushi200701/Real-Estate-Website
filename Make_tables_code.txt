@@ -1,0 +1,163 @@
+CREATE DATABASE  IF NOT EXISTS `dbvotzvbtgnkbj`;
+USE `dbvotzvbtgnkbj`;
+
+CREATE TABLE `agent` (
+  `ID` int(5) NOT NULL AUTO_INCREMENT,
+  `Firstname` varchar(30) NOT NULL,
+  `Lastname` varchar(30) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `contact` varchar(13) NOT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `contact` (`contact`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+DESC agent;
+
+LOCK TABLES `agent` WRITE;
+INSERT INTO `agent`
+	VALUES (1,'Breana','Leannon','Sarah.Boyer23@hotmail.com','446-518-9009'),
+		(2,'Helga','Heathcote','Pierce39@hotmail.com','005-979-9648'),
+        (3,'Cary','O\'Keefe','Gonzalo0@yahoo.com','103-558-4499'),
+        (4,'Ward','Osinski','Danny.Schmeler@gmail.com','848-174-8776'),
+        (5,'Kattie','O\'Kon','Bernita33@hotmail.com','038-653-0490'),
+        (6,'Jane','Graham','Hector88@hotmail.com','106-317-2588'),
+        (7,'Rosina','Farrell','Myrtis_Hyatt@hotmail.com','023-217-9287'),
+        (8,'Nadia','Hahn','Rod28@gmail.com','325-687-7891'),
+        (9,'Sigurd','Nitzsche','Savion58@gmail.com','603-689-0868');
+UNLOCK TABLES;
+
+select * from agent;
+
+CREATE TABLE `property` (
+  `ID` int(5) NOT NULL AUTO_INCREMENT,
+  `p_address` varchar(300) NOT NULL,
+  `type` varchar(100) NOT NULL,
+  `status` varchar(10) NOT NULL,
+  `tag` varchar(5) NOT NULL,
+  `size` int(8) NOT NULL,
+  `no_of_bedrooms` int(2),
+  `selling_price` int(8),
+  `rent` int(8),
+  `a_ID` int(5) NOT NULL,
+  PRIMARY KEY (`ID`),
+  CONSTRAINT `property_fk_1` FOREIGN KEY (`a_ID`) REFERENCES `agent` (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+
+DESC property;
+
+LOCK TABLES `property` WRITE;
+INSERT INTO `property`
+	VALUES (1,'Uruli Devachi, Pune, Maharashtra','Residential Apartment','available','sale',560,1,5600000,null,6),
+		(2,'Lohegaon, Pune, Maharashtra','Residential Apartment','available','sale',620,2,5600000,null,2),
+        (3,'Shankar Kalat Nagar, Pune, Maharashtra','Residential Apartment','available','rent',1457,3,null,30000,3),
+        (4,'Wagholi, Pune, Maharashtra','Residential Apartment','available','rent',838,2,null,11000,7),
+        (5,'Somatne Phata, Pune, Maharashtra','Farm House/Residential Apartment','available','sale',2000,2,5600000,null,6),
+        (6,'Wakad, Pune, Maharashtra','Farm House/Independent House','available','sale',1041,3,5600000,null,7),
+        (7,'Undri, Pune, Maharashtra','Farm House/Residential Apartment','available','sale',678,3,5600000,null,8),
+        (8,'Hinjewadi, Pune, Maharashtra','Residential Apartment','available','rent',416,1,null,15000,1),
+        (9,'Hinjewadi, Pune, Maharashtra','Residential Apartment','available','rent',900,3,null,22000,3),
+        (10,'Hinjewadi, Pune, Maharashtra','Residential Apartment','available','rent',445,1,null,5220,9),
+        (11,'Hinjewadi, Pune, Maharashtra','Residential Apartment','available','rent',1200,3,null,4800,1),
+        (12,'Hinjewadi, Pune, Maharashtra','Farm House/Independent House','available','sale',422,1,5600000,null,2),
+        (13,'Hinjewadi, Pune, Maharashtra','Residential Land/Plot','available','sale',12000,null,10000000,null,5),
+        (14,'Wakad, Pune, Maharashtra','Residential Apartment','available','rent',1500,3,null,3500,4),
+        (15,'Wakad, Pune, Maharashtra','Residential Apartment','available','rent',250,1,null,10000,9)
+    ;
+UNLOCK TABLES;
+
+select * from property;
+
+CREATE TABLE `buyer` (
+  `ID` int(10) NOT NULL AUTO_INCREMENT,
+  `Firstname` varchar(30) NOT NULL,
+  `Lastname` varchar(30) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `contact` varchar(13) DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `contact` (`contact`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+DESC buyer;
+
+LOCK TABLES `buyer` WRITE;
+INSERT INTO `buyer`
+	VALUES (1,'Bessie','Funk','Braxton44@yahoo.com','762-053-3129'),
+		(2,'Domingo','Goldner','Aracely1@gmail.com','349-164-6968'),
+        (3,'Bridget','Barton','Fermin.Casper@yahoo.com','644-408-3133'),
+        (4,'Dana','Quigley','Lance_Marks@gmail.com','225-023-1516'),
+        (5,'Ricky','Crooks','Allene.Cummerata@hotmail.com','334-527-2938'),
+        (6,'Alycia','Quigley','Omer_Gusikowski@hotmail.com','752-311-8642'),
+        (7,'Elinore','Johnson','Jovani.Kshlerin13@hotmail.com','866-426-3811'),
+        (8,'Domenica','Schmitt','Mariane_Crona@yahoo.com','821-987-1169');
+UNLOCK TABLES;
+
+select * from buyer;
+
+CREATE TABLE `seller` (
+  `ID` int(5) NOT NULL AUTO_INCREMENT,
+  `Firstname` varchar(30) NOT NULL,
+  `Lastname` varchar(30) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `contact` varchar(13) NOT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `contact` (`contact`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+
+DESC seller;
+
+LOCK TABLES `seller` WRITE;
+INSERT INTO `seller`
+	VALUES (1,'Jefferey','Baumbach','Casimir_Hermann33@gmail.com','773-799-3893'),
+		(2,'Tiana','Jacobs','Lea_Collier@hotmail.com','730-355-2858'),
+		(3,'Winifred','Hoppe','Joshuah_Hessel25@gmail.com','524-669-5716'),
+		(4,'Einar','Haley','Gerda.Langworth99@yahoo.com','816-952-0591'),
+		(5,'Mariaam','Rempeel','Newell608@gmail.com','469-634-4320'),
+        (6,'Ervin','Wolff','Audreanne99@hotmail.com','450-833-5511'),
+        (7,'Isabelle','Shields','Guiseppe19@hotmail.com','074-209-8720'),
+        (8,'Tobin','Eichmann','Anissa_Lakin63@gmail.com','593-844-0826'),
+        (9,'Harrison','Hayes','David53@gmail.com','834-340-6894'),
+        (10,'Ellsworth','Dickens','Gage17@yahoo.com','201-799-7382'),
+        (11,'Edmund','Feil','Kristian_Purdy@yahoo.com','726-514-7596'),
+        (12,'Casey','Cronin','Caroline.Keebler26@gmail.com','431-146-2332'),
+        (13,'Rod','Abshire','Houston7@yahoo.com','701-621-2362'),
+        (14,'Lonny','Halvorson','Breanna_Hauck65@hotmail.com','633-185-5539'),
+        (15,'Lambert','Kuvalis','Colten.Runte@gmail.com','263-117-9363');
+UNLOCK TABLES;
+
+select * from seller;
+
+CREATE TABLE `rent` (
+  `txn_ID` int(5) NOT NULL AUTO_INCREMENT,
+  `p_ID` int(5) NOT NULL,
+  `b_ID` int(5) NOT NULL,
+  `rent` int(8) NOT NULL,
+  `st_date` date NOT NULL,
+  `end_date` date NOT NULL,
+  `a_ID` int(5) NOT NULL,
+  PRIMARY KEY (`txn_ID`),
+  CONSTRAINT `rent_fk_1` FOREIGN KEY (`a_ID`) REFERENCES `agent` (`ID`),
+  CONSTRAINT `rent_fk_2` FOREIGN KEY (`b_ID`) REFERENCES `buyer` (`ID`),
+  CONSTRAINT `rent_fk_3` FOREIGN KEY (`p_ID`) REFERENCES `property` (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+DESC rent;
+
+CREATE TABLE `sale` (
+  `txn_ID` int(5) NOT NULL AUTO_INCREMENT,
+  `p_ID` int(5) NOT NULL,
+  `b_ID` int(5) NOT NULL,
+  `selling_price` int(8) NOT NULL,
+  `s_date` date NOT NULL,
+  `a_ID` int(5) NOT NULL,
+  PRIMARY KEY (`txn_ID`),
+  CONSTRAINT `sale_fk_1` FOREIGN KEY (`a_ID`) REFERENCES `agent` (`ID`),
+  CONSTRAINT `sale_fk_2` FOREIGN KEY (`b_ID`) REFERENCES `buyer` (`ID`),
+  CONSTRAINT `sale_fk_3` FOREIGN KEY (`p_ID`) REFERENCES `property` (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+DESC sale;
+
+-- drop database `dbvotzvbtgnkbj`;
