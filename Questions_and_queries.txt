@@ -1,0 +1,67 @@
+-- QUESTIONS
+
+
+Q1 
+Find addresses of homes in your city (for example Guwahati) with rent between Rs.20,000 and Rs. 40,000 per month.
+
+SELECT ID, p_address, rent, status
+FROM property
+WHERE rent BETWEEN '20000' AND '40000';
+
+
+
+
+Q2
+Find details of homes for rent in G.S.Road (you can use the name of another locality if your city is different)
+with at least 2 bedrooms and costing less than Rs.10,000 per month. Show the contact number(s) of agents
+who can show you these properties.
+
+SELECT property.*, agent.contact AS agent_contact
+FROM property, agent
+WHERE (a_ID = agent.ID) 
+	AND (rent <= 10000)
+    AND (no_of_bedrooms >= 2)
+    AND p_address LIKE '%wakad%';
+    
+
+
+
+Q3
+Find the name of the agent who has sold the most property in the year 2021 by total amount in rupees.
+
+SELECT Firstname, Lastname, ag.max_prop_sold_in_2021
+FROM (SELECT ID, MAX(s.prop_sold_in_2021) AS max_prop_sold_in_2021
+	FROM agent,
+		(SELECT a_ID, COUNT(p_ID) AS prop_sold_in_2021
+		FROM sale
+		WHERE s_date LIKE '2021%'
+		GROUP BY a_ID) AS s
+    WHERE s.a_ID = agent.ID) AS ag,
+    agent
+WHERE agent.ID = ag.ID;
+
+
+
+
+Q4
+Find the addresses of homes in your city that are available for sale and that has at least 2 bed rooms. List the
+asking price and the number of bedrooms, with other details that may be necessary.
+
+SELECT *
+FROM property
+WHERE tag = 'sale' AND status = 'available' AND no_of_bedrooms >= 2;
+
+
+
+
+Q5
+List the details of the most expensive houses and the houses with the highest rent, in the database.
+
+SELECT property.*
+FROM (SELECT MAX(selling_price) AS max_sp, MAX(rent) AS max_rent
+	FROM property
+	WHERE type REGEXP 'house|apartment') AS max_price,
+    property
+WHERE property.selling_price = max_price.max_sp OR
+	property.rent = max_price.max_rent;
+
