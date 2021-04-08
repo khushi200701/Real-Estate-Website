@@ -1,5 +1,4 @@
 CREATE DATABASE  IF NOT EXISTS `dbvotzvbtgnkbj`;
-
 USE `dbvotzvbtgnkbj`;
 
 CREATE TABLE `agent` (
