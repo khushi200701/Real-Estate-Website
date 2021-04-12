@@ -5,10 +5,10 @@ var mysql = require('mysql');
 
 
 var con = mysql.createConnection({  
-  host: "35.213.189.162",  
-  user: "staisaho_pink",  
-  password: "dbmsproject2020"  ,
-  database: 'staisaho_dbmsproject'
+  host: '35.213.189.162',
+  user: 'u3weyex0o4ihe',
+  password: 'password@123',
+  database: 'dbvotzvbtgnkbj'
 });  
 con.connect(function(err) {  
   if (err) throw err;  

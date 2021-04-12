@@ -14,12 +14,10 @@ var app = express();
 var { createConnection }      = require('mysql');
 var bodyParser=require("body-parser");
 var connection = createConnection({
-
-
-        host: '35.213.189.162',
-        user: 'staisaho_pink',
-        password: 'dbmsproject2020', 
-        database: 'staisaho_dbmsproject'
+  host: '35.213.189.162',
+  user: 'u3weyex0o4ihe',
+  password: 'password@123',
+  database: 'dbvotzvbtgnkbj'
             });
  
 connection.connect();
