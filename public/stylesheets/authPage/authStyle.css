@@ -11,12 +11,12 @@ body{
 }
 
 .wrap{
-    width: 50%;
+    width: 30%;
     overflow: hidden;
     margin: auto;
     margin-top: 180px;
     padding: 20px;
-    background: #fff;
+    background: #CAFFF4;
     border: 1px solid silver;
     border-radius: 5px;
 }
@@ -38,9 +38,9 @@ body{
     padding: 5px;
     width: 412px;
     height: 40px;
-    background-color: #3498db;
+    background-color: #000000;
     color: #fff;
-    border-radius: 3px;
+    border-radius: 10px;
     border: 0;
     font-size: 18px ;
 }

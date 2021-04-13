@@ -46,7 +46,7 @@
 
     
     </head>
-    <body>
+    <body  style="background-color:#CAFFF4;">
        
             <div class="header ">
                     <span style=" font-weight : 700 ;font-size: 26px; margin-left: 50px; margin-right: 20px;"> <%= tit %> Profile</span>
@@ -81,7 +81,7 @@
                   
                   <% if(tit === "Agent") { %>
                     <div style="width: 60%; height:100px; margin: 30px auto 0px auto; ">
-                        <a  href="/office/profile/<%= id %>" style="text-decoration: none;" ><div style=" padding :20px; background-color: #0275d8; color :white; border-radius: 10px; width :40%; margin: 20px auto 0px auto; cursor: pointer;">REPORT</div></a>
+                        <a  href="/office/profile/<%= id %>" style="text-decoration: none;" ><div style=" padding :20px; background-color:black; color :white; border-radius: 10px; width :40%; margin: 20px auto 0px auto; cursor: pointer;">REPORT</div></a>
                        </div>
                     <% } %>
   
@@ -89,7 +89,7 @@
                   if(flag===2){  
                    %>
                      <div style="width: 60%; height:100px; margin: 30px auto 0px auto; ">
-                      <div  onclick="show('table1');" style=" padding :20px; background-color: #0275d8; color :white; border-radius: 10px; width :40%; margin: 20px auto 0px auto; cursor: pointer; ">PROPERTIES LISTED</div>
+                      <div  onclick="show('table1');" style=" padding :20px; background-color:black; color :white; border-radius: 10px; width :40%; margin: 20px auto 0px auto; cursor: pointer; ">PROPERTIES LISTED</div>
                       
                      </div>
                      
@@ -144,8 +144,8 @@
                       if(flag===1){  
                        %>
                        <div style="width: 60%; height:100px; margin: 30px auto 0px auto; ">
-                          <div  onclick="table_show('table1');" style="float :right; padding :20px; background-color: #0275d8; color :white; border-radius: 10px; width :40%; margin: 20px 20px 0px 20px; cursor: pointer; ">MY OWNED PROPERTIES</div>
-                          <div onclick="table_show('table2');" style="float: left; padding :20px; background-color: #0275d8; color :white; border-radius: 10px; width :40%; margin: 20px 20px 0px 20px; cursor: pointer; ">MY RENTED PROPERTIES</div>
+                          <div  onclick="table_show('table1');" style="float :right; padding :20px; background-color:black; color :white; border-radius: 10px; width :40%; margin: 20px 20px 0px 20px; cursor: pointer; ">MY OWNED PROPERTIES</div>
+                          <div onclick="table_show('table2');" style="float: left; padding :20px; background-color:black; color :white; border-radius: 10px; width :40%; margin: 20px 20px 0px 20px; cursor: pointer; ">MY RENTED PROPERTIES</div>
                            
                          </div>
                          
