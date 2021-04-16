@@ -1,14 +1,15 @@
 ## RUN THE REAL ESTATE WEBSITE:
 ***
+***
 ON WEB:
 1. **GO TO https://home-mavens.herokuapp.com/**
-* Select Agent or Admin button to go to their respective login pages
-* Agent: 
-    * username: "29" 
-    * password: "password"
-* Admin: 
-    * username: "khushi20" 
-    * password: "dbms"
+* Select Agent or Admin button to go to their respective login pages.
+* Agent credentials: 
+    * Username: "29" 
+    * Password: "password"
+* Admin credentials: 
+    * Username: "khushi20" 
+    * Password: "dbms"
 ***
 ON YOUR MACHINE:
 * Clone this repository on your local machine.
