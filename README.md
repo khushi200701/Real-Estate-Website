@@ -1,6 +1,7 @@
 ## RUN THE REAL ESTATE WEBSITE:
 ***
-#ON WEB:
+
+## ON WEB:
 1. **GO TO https://home-mavens.herokuapp.com/**
 * Select "Login as Agent" or "Login as Admin" button to go to their respective login pages.
 * Agent credentials: 
@@ -10,7 +11,7 @@
     * Username: "khushi20" 
     * Password: "dbms"
 ***
-ON YOUR MACHINE:
+## ON YOUR MACHINE:
 * Clone this repository on your local machine.
 * Install Node.js and npm on your machine from here ( https://nodejs.org/en/download/ ). 
 * Check for the succesfull installation using the command -> node -v and npm -v.
