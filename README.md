@@ -1,23 +1,16 @@
-# Real-Estate-Website
-Project for DBMS course
-
-*RUN THE WEB APP:
-*A) Goto: 
-       * https://home-mavens.herokuapp.com/
-*B) Select Agent or Admin button to go to their respective login pages
-C) Agent: 
-        username: "29" 
-        password: "password"
-D) Admin: 
-        username: "khushi20" 
-        password: "dbms"
-
-
-
-TO RUN ON YOUR LOCAL MACHINE:
-A) Clone this repository on your local machine.
-B) Install Node.js and npm on your machine from here ( https://nodejs.org/en/download/ ). Check for the succesfull installation using the command -> node -v and npm -v.
-C) Open command prompt and change the directory to the cloned directory and run command -> npm install.
-D) Use command -> node app.js to start the server.
-E) Open your favourite browser and goto http://localhost:8080/.
-F) Repeat steps B,C,D as above from the previous section. \
+## FAQs
+***
+A list of frequently asked questions
+1. **This is a question in bold**
+Answer to the first question with _italic words_. 
+2. __Second question in bold__ 
+To answer this question, we use an unordered list:
+* First point
+* Second Point
+* Third point
+3. **Third question in bold**
+Answer to the third question with *italic words*.
+4. **Fourth question in bold**
+| Headline 1 in the tablehead | Headline 2 in the tablehead | Headline 3 in the tablehead |
+|:--------------|:-------------:|--------------:|
+| text-align left | text-align center | text-align right |
