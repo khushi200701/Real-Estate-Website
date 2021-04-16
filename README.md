@@ -1,10 +1,10 @@
 # Real-Estate-Website
 Project for DBMS course
 
-RUN THE WEB APP:
-A) Goto: 
-        https://home-mavens.herokuapp.com/
-B) Select Agent or Admin button to go to their respective login pages
+*RUN THE WEB APP:
+*A) Goto: 
+       * https://home-mavens.herokuapp.com/
+*B) Select Agent or Admin button to go to their respective login pages
 C) Agent: 
         username: "29" 
         password: "password"
