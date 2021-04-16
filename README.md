@@ -1,8 +1,11 @@
-## FAQs
+## RUN THE REAL ESTATE WEBSITE
 ***
-A list of frequently asked questions
-1. **This is a question in bold**
-Answer to the first question with _italic words_. 
+ON WEB:
+1. **GO TO https://home-mavens.herokuapp.com/**
+* Select Agent or Admin button to go to their respective login pages
+* Agent: username: "29" password: "password"
+* Admin: username: "khushi20" password: "dbms"
+* 
 2. __Second question in bold__ 
 To answer this question, we use an unordered list:
 * First point
