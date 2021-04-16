@@ -13,6 +13,7 @@ D) Admin:
         password: "dbms"
 
 
+
 TO RUN ON YOUR LOCAL MACHINE:
 A) Clone this repository on your local machine.
 B) Install Node.js and npm on your machine from here ( https://nodejs.org/en/download/ ). Check for the succesfull installation using the command -> node -v and npm -v.
