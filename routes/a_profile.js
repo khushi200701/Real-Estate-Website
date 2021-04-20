@@ -59,7 +59,6 @@ var prr,pss,ts;
       { var s = "select * from owner where ID ="+d.substring(2);
       con.query(s,(err, agnt) => {
         var user =  req.session.user;
-        //console.log("SELLER ME HAI APUN!");
         console.log(user);
         con.query("select * from property  where o_ID="+agnt[0].ID,(err, agent1) => {
         res.render("ag_profile.ejs",{ user : user, tit : "Seller",name : agnt[0].Firstname+" "+agnt[0].Lastname, con : agnt[0].contact, email : agnt[0].Email, id : agnt[0].ID, user : agnt[0].ID,flag : 2,userData : agent1, type : d[1]});
