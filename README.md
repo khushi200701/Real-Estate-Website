@@ -1,3 +1,8 @@
+# REAL ESTATE WEBSITE
+
+![screen](ss.png)
+
+
 ## RUN THE REAL ESTATE WEBSITE:
 ***
 
