@@ -3,7 +3,7 @@
 ![screen](ss.png)
 
 
-## RUN THE REAL ESTATE WEBSITE:
+## RUN THE WEBSITE:
 ***
 
 ## ON WEB:
